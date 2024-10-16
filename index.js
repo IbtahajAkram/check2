@@ -44,7 +44,10 @@ app.get('/', async (req, res) => {
         res.status(500).send('Error fetching products');
     }
 });
-
+app.get('/b',(req,res)=>{
+    console.log('han backend connect ha');
+    res.json({message:"han backend connect ha"})
+})
 // Start server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
